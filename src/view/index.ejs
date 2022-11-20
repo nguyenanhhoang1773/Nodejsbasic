@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <title>Nodejs</title>
+    <link rel="stylesheet" href="/css/index.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Table</h1>
+    </header>
+    <main>
+      <table>
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Address</th>
+            <th>Action #</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% for(let i =0; i< dataUser.length; i++){ %>
+          <tr>
+            <td data-label="ID:"><%=dataUser[i].id %></td>
+            <td data-label="First Name:"><%=dataUser[i].firtName %></td>
+            <td data-label="Last Name:"><%=dataUser[i].lastName %></td>
+            <td data-label="Address:"><%=dataUser[i].address %></td>
+            <td data-label="Action #:">
+              <a href="/detail/user/<%=dataUser[i].id%>">Detail</a>
+            </td>
+          </tr>
+          <% }%>
+        </tbody>
+      </table>
+    </main>
+  </body>
+</html>
